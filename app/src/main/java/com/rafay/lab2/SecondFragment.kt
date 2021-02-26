@@ -27,7 +27,8 @@ class SecondFragment : Fragment() {
 
 
         view.findViewById<Button>(R.id.button_second).setOnClickListener {
-            findNavController().navigate(R.id.action_SecondFragment_to_FirstFragment)
+            activity?.finishAffinity();
+            System.exit(0);
         }
 
         Toast.makeText(this.context, "Hello SMD", Toast.LENGTH_SHORT).show();
